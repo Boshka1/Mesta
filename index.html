@@ -1,88 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Рассадка аудитории</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            padding: 20px;
-        }
+<meta charset="UTF-8">
+<title>Рассадка аудитории</title>
 
-        h1 {
-            text-align: center;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 20px;
+}
 
-        .classroom {
-            display: grid;
-            grid-template-columns: 1fr 80px 1fr;
-            gap: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
+h1 {
+    text-align: center;
+}
 
-        .side {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
+.classroom {
+    display: grid;
+    grid-template-columns: 1fr 120px 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .desk {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 
-        .seat {
-            width: 100px;
-            height: 60px;
-            background: #e0e0e0;
-            border: 2px solid #999;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            text-align: center;
-            font-size: 14px;
-            padding: 5px;
-        }
+.row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
 
-        .seat.occupied {
-            background: #90caf9;
-            border-color: #1e88e5;
-        }
+.desk {
+    display: flex;
+    gap: 10px;
+}
 
-        .aisle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #888;
-            font-style: italic;
-        }
+.seat {
+    width: 90px;
+    height: 55px;
+    background: #e0e0e0;
+    border: 2px solid #999;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+    padding: 4px;
+}
 
-        .hint {
-            text-align: center;
-            margin-top: 20px;
-            color: #555;
-        }
-    </style>
+.seat.occupied {
+    background: #90caf9;
+    border-color: #1e88e5;
+}
+
+.aisle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-style: italic;
+}
+
+.hint {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+</style>
 </head>
+
 <body>
 
 <h1>Занятость рассадки</h1>
 
 <div class="classroom">
+
     <!-- Левая сторона -->
     <div class="side">
-        <div class="desk">
-            <div class="seat" data-id="1"></div>
-            <div class="seat" data-id="2"></div>
+        <!-- 5 рядов по 4 места -->
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="1"></div>
+                <div class="seat" data-id="2"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="3"></div>
+                <div class="seat" data-id="4"></div>
+            </div>
         </div>
-        <div class="desk">
-            <div class="seat" data-id="3"></div>
-            <div class="seat" data-id="4"></div>
+
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="5"></div>
+                <div class="seat" data-id="6"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="7"></div>
+                <div class="seat" data-id="8"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="9"></div>
+                <div class="seat" data-id="10"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="11"></div>
+                <div class="seat" data-id="12"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="13"></div>
+                <div class="seat" data-id="14"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="15"></div>
+                <div class="seat" data-id="16"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="17"></div>
+                <div class="seat" data-id="18"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="19"></div>
+                <div class="seat" data-id="20"></div>
+            </div>
         </div>
     </div>
 
@@ -91,15 +146,62 @@
 
     <!-- Правая сторона -->
     <div class="side">
-        <div class="desk">
-            <div class="seat" data-id="5"></div>
-            <div class="seat" data-id="6"></div>
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="21"></div>
+                <div class="seat" data-id="22"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="23"></div>
+                <div class="seat" data-id="24"></div>
+            </div>
         </div>
-        <div class="desk">
-            <div class="seat" data-id="7"></div>
-            <div class="seat" data-id="8"></div>
+
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="25"></div>
+                <div class="seat" data-id="26"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="27"></div>
+                <div class="seat" data-id="28"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="29"></div>
+                <div class="seat" data-id="30"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="31"></div>
+                <div class="seat" data-id="32"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="33"></div>
+                <div class="seat" data-id="34"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="35"></div>
+                <div class="seat" data-id="36"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="desk">
+                <div class="seat" data-id="37"></div>
+                <div class="seat" data-id="38"></div>
+            </div>
+            <div class="desk">
+                <div class="seat" data-id="39"></div>
+                <div class="seat" data-id="40"></div>
+            </div>
         </div>
     </div>
+
 </div>
 
 <div class="hint">
@@ -107,52 +209,48 @@
 </div>
 
 <script>
-    const STORAGE_KEY = 'classroom_seats';
+const STORAGE_KEY = 'classroom_seats';
 
-    function loadSeats() {
-        const data = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-
-        document.querySelectorAll('.seat').forEach(seat => {
-            const id = seat.dataset.id;
-            if (data[id]) {
-                seat.textContent = data[id];
-                seat.classList.add('occupied');
-            } else {
-                seat.textContent = 'Свободно';
-            }
-
-            seat.onclick = () => editSeat(seat);
-        });
-    }
-
-    function saveSeats() {
-        const data = {};
-        document.querySelectorAll('.seat').forEach(seat => {
-            if (seat.classList.contains('occupied')) {
-                data[seat.dataset.id] = seat.textContent;
-            }
-        });
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    }
-
-    function editSeat(seat) {
-        const currentName = seat.classList.contains('occupied') ? seat.textContent : '';
-        const name = prompt('Введите имя:', currentName);
-
-        if (name === null) return;
-
-        if (name.trim() === '') {
-            seat.textContent = 'Свободно';
-            seat.classList.remove('occupied');
-        } else {
-            seat.textContent = name.trim();
+function loadSeats() {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    document.querySelectorAll('.seat').forEach(seat => {
+        const id = seat.dataset.id;
+        if (data[id]) {
+            seat.textContent = data[id];
             seat.classList.add('occupied');
+        } else {
+            seat.textContent = 'Свободно';
         }
+        seat.onclick = () => editSeat(seat);
+    });
+}
 
-        saveSeats();
+function saveSeats() {
+    const data = {};
+    document.querySelectorAll('.seat').forEach(seat => {
+        if (seat.classList.contains('occupied')) {
+            data[seat.dataset.id] = seat.textContent;
+        }
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function editSeat(seat) {
+    const current = seat.classList.contains('occupied') ? seat.textContent : '';
+    const name = prompt('Введите имя:', current);
+    if (name === null) return;
+
+    if (name.trim() === '') {
+        seat.textContent = 'Свободно';
+        seat.classList.remove('occupied');
+    } else {
+        seat.textContent = name.trim();
+        seat.classList.add('occupied');
     }
+    saveSeats();
+}
 
-    loadSeats();
+loadSeats();
 </script>
 
 </body>
